@@ -61,6 +61,10 @@
   "sameAs": [
     "https://www.instagram.com/in.her.m.era/"
   ],
+  "subjectOf": [
+    {"@type": "NewsArticle", "headline": "Utah mom, breast cancer survivor turns hardship into hope through permanent jewelry business", "url": "https://www.ksl.com/article/51463396/utah-mom-breast-cancer-survivor-turns-hardship-into-hope-through-permanent-jewelry-business", "publisher": {"@type": "Organization", "name": "KSL News"}},
+    {"@type": "NewsArticle", "headline": "A cancer survivor and single mom learns how to weld to open her own permanent jewelry business", "url": "https://www.fox13now.com/the-place/a-cancer-survivor-and-single-mom-learns-how-to-weld-to-open-her-own-permanent-jewelry-business", "publisher": {"@type": "Organization", "name": "FOX 13 Salt Lake City"}}
+  ],
   "areaServed": ["Lehi", "American Fork", "Saratoga Springs", "Orem", "Provo", "Utah County"],
   "makesOffer": [
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Bracelets"}},
@@ -157,8 +161,17 @@
   .hero p.lede{font-size:19px;max-width:44ch;margin-bottom:26px}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
   .hero-note{font-size:15px;color:#5B6663}
+  .features{margin-top:26px;display:grid;gap:12px}
+  .features-label{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5B6663;margin:0}
+  .feature{display:block;padding:16px 18px;border-radius:14px;background:#fff;border:1px solid rgba(0,0,0,.08);text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+  .feature:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .feature-src{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal,#2A8C8C)}
+  .feature-title{display:block;font-family:'Fraunces',serif;font-size:17px;line-height:1.35;margin:6px 0}
+  .feature-cta{font-size:14px;color:#5B6663}
   .press{display:flex;gap:18px;align-items:center;margin-top:26px;flex-wrap:wrap}
   .press span{font-size:14px;color:#5B6663}
+  .press a{text-decoration:none}
+  .press a:hover b{text-decoration:underline}
   .press b{font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--ink)}
   .hero-photo{
     aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;
@@ -303,8 +316,8 @@
         <p class="hero-note">Appointments take about 20 minutes · Walk-ins welcome when the studio is open</p>
         <div class="press">
           <span>As seen on</span>
-          <b>KSL News</b>
-          <b>Fox 13</b>
+          <a href="https://www.ksl.com/article/51463396/utah-mom-breast-cancer-survivor-turns-hardship-into-hope-through-permanent-jewelry-business" target="_blank" rel="noopener"><b>KSL News</b></a>
+          <a href="https://www.fox13now.com/the-place/a-cancer-survivor-and-single-mom-learns-how-to-weld-to-open-her-own-permanent-jewelry-business" target="_blank" rel="noopener"><b>Fox 13</b></a>
         </div>
       </div>
       <div class="hero-photo">
@@ -373,6 +386,19 @@
         <p>I'm a mom, a former teacher, and a breast cancer survivor. After everything life threw at me, I built this business from scratch, learned to weld, and opened my own studio in Lehi.</p>
         <p class="quote">Your story belongs in more places than your memories. I help women wear their stories, not just tell them.</p>
         <p>Every piece I weld means something to the person wearing it. That's the whole point.</p>
+        <div class="features">
+          <p class="features-label">Read my story</p>
+          <a class="feature" href="https://www.ksl.com/article/51463396/utah-mom-breast-cancer-survivor-turns-hardship-into-hope-through-permanent-jewelry-business" target="_blank" rel="noopener">
+            <span class="feature-src">KSL News</span>
+            <span class="feature-title">Utah mom and breast cancer survivor turns hardship into hope through permanent jewelry</span>
+            <span class="feature-cta">Read the article &rarr;</span>
+          </a>
+          <a class="feature" href="https://www.fox13now.com/the-place/a-cancer-survivor-and-single-mom-learns-how-to-weld-to-open-her-own-permanent-jewelry-business" target="_blank" rel="noopener">
+            <span class="feature-src">Fox 13 &middot; The Place</span>
+            <span class="feature-title">A cancer survivor and single mom learns to weld to open her own permanent jewelry business</span>
+            <span class="feature-cta">Watch the segment &rarr;</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
