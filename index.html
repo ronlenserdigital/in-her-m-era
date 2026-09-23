@@ -40,7 +40,6 @@
   "telephone": "REPLACE_PHONE",
   "image": "https://permanentjewelryut.com/img/hero.jpg",
   "logo": "https://permanentjewelryut.com/img/hero.jpg",
-  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "4161 N Thanksgiving Way, Suite 202",
@@ -66,10 +65,13 @@
     {"@type": "NewsArticle", "headline": "A cancer survivor and single mom learns how to weld to open her own permanent jewelry business", "url": "https://www.fox13now.com/the-place/a-cancer-survivor-and-single-mom-learns-how-to-weld-to-open-her-own-permanent-jewelry-business", "publisher": {"@type": "Organization", "name": "FOX 13 Salt Lake City"}}
   ],
   "areaServed": ["Lehi", "American Fork", "Saratoga Springs", "Orem", "Provo", "Utah County"],
+  "priceRange": "$25-$95",
   "makesOffer": [
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Bracelets"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Anklets"}},
-    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Necklaces"}},
+    {"@type": "Offer", "price": "25", "priceCurrency": "USD", "itemOffered": {"@type": "Service", "name": "Permanent Rings"}},
+    {"@type": "Offer", "price": "65", "priceCurrency": "USD", "itemOffered": {"@type": "Service", "name": "Permanent Bracelets"}},
+    {"@type": "Offer", "price": "75", "priceCurrency": "USD", "itemOffered": {"@type": "Service", "name": "Permanent Bangles and Anklets"}},
+    {"@type": "Offer", "price": "95", "priceCurrency": "USD", "itemOffered": {"@type": "Service", "name": "Permanent Necklaces"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Charms"}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": "5", "priceCurrency": "USD"}},
     {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Group Events and Parties"}}
   ],
   "potentialAction": {
@@ -84,7 +86,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type": "Question", "name": "What is permanent jewelry?", "acceptedAnswer": {"@type": "Answer", "text": "Permanent jewelry is a custom-fit chain welded closed on your wrist, ankle, or neck instead of using a clasp. You pick the chain, it is fitted to you exactly, and a quick painless spark seals it. You wear it 24/7."}},
-    {"@type": "Question", "name": "How much does permanent jewelry cost?", "acceptedAnswer": {"@type": "Answer", "text": "Bracelets start at $XX, anklets at $XX, and necklaces at $XX. The price covers the chain, custom fitting, and the weld. Charms are extra."}},
+    {"@type": "Question", "name": "How much does permanent jewelry cost?", "acceptedAnswer": {"@type": "Answer", "text": "Rings are $25, bracelets $65, bangles and anklets $75, and necklaces $95. Charms start at $5. The price covers your chain, custom fitting, and the weld."}},
     {"@type": "Question", "name": "Does the weld hurt?", "acceptedAnswer": {"@type": "Answer", "text": "Not at all. The spark never touches your skin. Most people say they barely notice it."}},
     {"@type": "Question", "name": "Can I take it off later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can snip it off anytime with scissors, and it can be re-welded back on later."}},
     {"@type": "Question", "name": "How long does an appointment take?", "acceptedAnswer": {"@type": "Answer", "text": "About 15 to 20 minutes for one piece. Groups and parties are welcome."}},
@@ -198,8 +200,11 @@
   .step p{color:#4B5754;font-size:16px}
 
   /* ===== Pricing ===== */
-  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-  @media (max-width:720px){.pricing-grid{grid-template-columns:1fr}}
+  .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px}
+  @media (max-width:960px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.pricing-grid{grid-template-columns:1fr}}
+  .charms{margin-top:22px;font-size:17px;color:var(--ink)}
+  .charms b{font-family:'Fraunces',serif;color:var(--teal-deep)}
   .price-card{
     background:#fff;border:1px solid #E7E4DC;border-radius:var(--radius);
     padding:26px 24px;
@@ -356,22 +361,28 @@
       <h2>Pricing</h2>
       <div class="pricing-grid">
         <div class="price-card">
+          <h3>Rings</h3>
+          <p class="amt">$25</p>
+          <p>Dainty and custom fit to your finger.</p>
+        </div>
+        <div class="price-card">
           <h3>Bracelets</h3>
-          <p class="amt">$XX<small> starting at</small></p>
+          <p class="amt">$65</p>
           <p>The classic. Most people start here.</p>
         </div>
         <div class="price-card">
-          <h3>Anklets</h3>
-          <p class="amt">$XX<small> starting at</small></p>
-          <p>A little longer chain, same forever fit.</p>
+          <h3>Bangles &amp; Anklets</h3>
+          <p class="amt">$75</p>
+          <p>A little more chain, same forever fit.</p>
         </div>
         <div class="price-card">
-          <h3>Necklaces &amp; rings</h3>
-          <p class="amt">$XX<small> starting at</small></p>
-          <p>Custom lengths, welded to fit you.</p>
+          <h3>Necklaces</h3>
+          <p class="amt">$95</p>
+          <p>Custom length, welded to fit you.</p>
         </div>
       </div>
-      <p class="pricing-note">Final price depends on the chain and charms you choose. Groups, parties, and private events welcome, ask me about group rates when you book.</p>
+      <p class="charms"><b>Charms</b> starting at $5. Add one to any piece.</p>
+      <p class="pricing-note">Final price depends on the chain you choose. Groups, parties, and private events welcome, ask me about group rates when you book.</p>
     </div>
   </section>
 
@@ -471,7 +482,7 @@
       </details>
       <details>
         <summary>How much does permanent jewelry cost?</summary>
-        <p>Bracelets start at $XX, anklets at $XX, and necklaces at $XX. The price covers your chain, custom fitting, and the weld. Charms are extra.</p>
+        <p>Rings are $25, bracelets $65, bangles and anklets $75, and necklaces $95. Charms start at $5. The price covers your chain, custom fitting, and the weld.</p>
       </details>
       <details>
         <summary>Does the weld hurt?</summary>
